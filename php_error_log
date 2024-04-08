@@ -1,0 +1,85 @@
+[07-Apr-2024 23:29:40 Europe/Berlin] PHP Warning:  Undefined variable $routesArray in C:\xampp\htdocs\apirest-dinamica\routes\services\get.php on line 3
+[07-Apr-2024 23:29:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\apirest-dinamica\routes\services\get.php on line 3
+[07-Apr-2024 23:29:49 Europe/Berlin] PHP Warning:  Undefined variable $routesArray in C:\xampp\htdocs\apirest-dinamica\routes\services\get.php on line 3
+[07-Apr-2024 23:29:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\apirest-dinamica\routes\services\get.php on line 3
+[08-Apr-2024 00:03:33 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database-1.coursess' doesn't exist in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('coursess')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(7): getController::getData('coursess')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(16): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
+[08-Apr-2024 00:44:30 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?select=id_courses' at line 1 in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('courses?select=...', 'id_courses')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(9): getController::getData('courses?select=...', 'id_courses')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(17): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
+[08-Apr-2024 00:48:27 Europe/Berlin] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\apirest-dinamica\routes\services\get.php on line 4
+[08-Apr-2024 00:49:43 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select=id_courses' at line 1 in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('select=id_cours...', 'id_courses')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(12): getController::getData('select=id_cours...', 'id_courses')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(17): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
+[08-Apr-2024 00:50:06 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select=id_course' at line 1 in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('select=id_cours...', 'id_course')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(12): getController::getData('select=id_cours...', 'id_course')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(17): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
+[08-Apr-2024 00:50:42 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select=id_course' at line 1 in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('select=id_cours...', 'id_course')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(12): getController::getData('select=id_cours...', 'id_course')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(17): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
+[08-Apr-2024 00:50:43 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select=id_course' at line 1 in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('select=id_cours...', 'id_course')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(12): getController::getData('select=id_cours...', 'id_course')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(17): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
+[08-Apr-2024 00:50:43 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select=id_course' at line 1 in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('select=id_cours...', 'id_course')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(12): getController::getData('select=id_cours...', 'id_course')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(17): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
+[08-Apr-2024 00:50:44 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select=id_course' at line 1 in C:\xampp\htdocs\apirest-dinamica\models\get.model.php:9
+Stack trace:
+#0 C:\xampp\htdocs\apirest-dinamica\models\get.model.php(9): PDOStatement->execute()
+#1 C:\xampp\htdocs\apirest-dinamica\controllers\get.controller.php(6): getModel::getData('select=id_cours...', 'id_course')
+#2 C:\xampp\htdocs\apirest-dinamica\routes\services\get.php(12): getController::getData('select=id_cours...', 'id_course')
+#3 C:\xampp\htdocs\apirest-dinamica\routes\routes.php(17): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\apirest-dinamica\controllers\routes.controller.php(4): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\apirest-dinamica\index.php(8): routerController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\apirest-dinamica\models\get.model.php on line 9
