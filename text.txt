@@ -1,0 +1,2 @@
+SELECT * FROM courses WHERE title_course = 'Java Script'
+
