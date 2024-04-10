@@ -5,8 +5,12 @@
 
     class getModel{
           // get sin filtro
-        static public function getData($table, $select){
+        static public function getData($table, $select, $orderBy, $orderMode){
             $sql = "SELECT $select FROM $table";
+
+            if($orderBy != null && $orderMode != null){ 
+                $sql = "SELECT $select FROM $table ORDER BY $orderBy $orderMode";
+            }
 
             $stmt = Connection::connect()->prepare($sql);
             $stmt -> execute();
@@ -15,7 +19,7 @@
         }
         
         // get con  filtro
-        static public function getDataFilter($table, $select, $linkTo,$equalTo){
+        static public function getDataFilter($table, $select, $linkTo,$equalTo, $orderBy, $orderMode){
 
             $linkToArray = explode(',', $linkTo);
             $equalToArray = explode('_', $equalTo);
@@ -29,6 +33,9 @@
                 }
             }
             $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
+            if($orderBy != null && $orderMode != null){ 
+                $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode";
+            }
             $stmt = Connection::connect()->prepare($sql);
             foreach($linkToArray as $key => $value){
                 $stmt -> bindParam(":".$value, $equalToArray[$key], PDO::PARAM_STR);
