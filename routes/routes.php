@@ -1,5 +1,5 @@
 <?php
-$routeArray = explode("apirest-dinamica/", $_SERVER['REQUEST_URI']);
+$routeArray = explode("api-practice-php/", $_SERVER['REQUEST_URI']);
 $routeArray = array_filter($routeArray);
 
 if (count($routeArray) == 1) {

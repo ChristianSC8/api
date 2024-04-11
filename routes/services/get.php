@@ -4,8 +4,8 @@ require_once "controllers/get.controller.php";
 $table = explode("?",$routeArray[1])[0];
 //evalua si biene un parametro
 $select = $_GET["select"] ?? '*';
-$orderBy = $_GET["orderBy"] ?? 'null';
-$orderMode = $_GET["orderMode"] ?? 'null';
+$orderBy = $_GET["orderBy"] ?? null;
+$orderMode = $_GET["orderMode"] ?? null;
 
 $response = new getController();
 
