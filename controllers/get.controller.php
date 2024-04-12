@@ -3,14 +3,14 @@
 
     class getController{
         // get sin filtros
-        static public function getData($table,$select, $orderBy, $orderMode){
-            $response = getModel::getData($table,$select, $orderBy, $orderMode);
+        static public function getData($table,$select, $orderBy, $orderMode,$startAt, $endAt){
+            $response = getModel::getData($table,$select, $orderBy, $orderMode,$startAt, $endAt);
             $return = new getController();
             $return -> fncResponse($response);
         }  
         // get con filtros 
-        static public function getDataFilter($table,$select,$linkTo,$equalTo, $orderBy, $orderMode){
-            $response = getModel::getDataFilter($table,$select,$linkTo,$equalTo, $orderBy, $orderMode);
+        static public function getDataFilter($table,$select,$linkTo,$equalTo, $orderBy, $orderMode,$startAt, $endAt){
+            $response = getModel::getDataFilter($table,$select,$linkTo,$equalTo, $orderBy, $orderMode,$startAt, $endAt);
             $return = new getController();
             $return -> fncResponse($response);
         }  
