@@ -2,26 +2,37 @@
     class connection{
         static public function infoDataBase(){
             $infoDB = array(
-                "database" => "database-1",
+                "host" => "roundhouse.proxy.rlwy.net",
+                "port" => "50981",
+                "database" => "railway",
                 "user" => "root",
-                "pass" => ""
+                "password" => "AdcMFeqUeaDzEGtcKBOjgmmCGClmWcEX"
             );
             return $infoDB;
         }
         
         static function connect(){
             try{
-                $link = new PDO(
-                    "mysql:host=localhost;dbname=".Connection::infoDataBase()["database"],
-                    Connection::infoDataBase()["user"],
-                    Connection::infoDataBase()["pass"]
+
+                $databaseConfig = Connection::infoDataBase();
+                $connectionDNS = "mysql:host={$databaseConfig['host']};port={$databaseConfig['port']};dbname={$databaseConfig['database']}";
+                
+                $connectionDB = new PDO(
+                    $connectionDNS,
+                    $databaseConfig['user'],
+                    $databaseConfig['password']
                 );
 
-                $link->exec("set names utf8");
+                $connectionDB -> exec("set names utf8");
+
             }catch(PDOException $e){
-                die("Error:" . $e->getMessage());
+
+                die("Error:" . $e -> getMessage());
+
             }
-            return $link;
+
+            return $connectionDB;
+
         }
     }
 ?>
