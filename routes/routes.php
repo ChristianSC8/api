@@ -1,15 +1,15 @@
 <?php
-$routeArray = explode("bolsa/", $_SERVER['REQUEST_URI']);
+$routeArray = explode("/", $_SERVER['REQUEST_URI']);
 $routeArray = array_filter($routeArray);
 
-if (count($routeArray) == 1) {
-    $json = array(
-        'status' => 404,
-        'response' => 'Not Found'
-    );
-    echo json_encode($json, http_response_code($json["status"]));
-    return;
-}
+// if (count($routeArray) == 1) {
+//     $json = array(
+//         'status' => 404,
+//         'response' => 'Not Found'
+//     );
+//     echo json_encode($json, http_response_code($json["status"]));
+//     return;
+// }
 
 if (count($routeArray) > 1 && isset($_SERVER['REQUEST_METHOD'])) {
     

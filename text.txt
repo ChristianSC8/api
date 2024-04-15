@@ -1,8 +1,0 @@
-SELECT * FROM courses WHERE title_course = 'Java Script'
----
-SELECT * FROM courses WHERE title_course = 'Java Script' AND id_instructor_course = 1;
-http://localhost/apirest-dinamica/courses
-http://localhost/apirest-dinamica/courses?select=id_course,title_course,description_course&linkTo=title_course&equalTo=Java Script
-http://localhost/apirest-dinamica/courses?select=id_course,title_course,description_course,id_instructor_course&linkTo=title_course,id_instructor_course&equalTo=Java Script_1
-
-----
